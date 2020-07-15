@@ -50,5 +50,6 @@ services:
     links:
     - course-edge-service
     - user-edge-service
+    #端口映射
     ports:
     - 8080:8080
