@@ -53,3 +53,11 @@ services:
     #端口映射
     ports:
     - 8080:8080
+# docker-compose up -d 后台启动
+# docker-compose down 关闭
+# docker exec -it {容器id} bash 进入容器
+# docker logs {容器id} 查看容器日志
+
+
+#docker tag name:version newName:分支 打个tag
+#docker push newName:分支 上传镜像
