@@ -59,5 +59,5 @@ services:
 # docker logs {容器id} 查看容器日志
 
 
-#docker tag name:version newName:分支 打个tag
+#docker tag name:version 镜像中心地址:端口/分组/服务:分支 打个tag
 #docker push newName:分支 上传镜像
