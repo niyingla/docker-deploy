@@ -1,24 +1,32 @@
+#版本
 version: '3'
 
+#网关名称
 networks:
   default:
     external:
       name: imooc-network
 
+#定义服务
 services:
+  #定义单个服务
   message-service:
+    #定义服务镜像
     image: message-service:latest
 
   user-service:
     image: user-service:latest
+    #定义服务参数
     command:
     - "--mysql.address=172.19.0.2"
 
   user-edge-service:
     image: user-edge-service:latest
+    #定义关联网络服务
     links:
     - user-service
     - message-service
+    #定义服务参数
     command:
     - "--redis.address=172.19.0.3"
 
