@@ -35,4 +35,5 @@ curl http://localhost:8001/api/vi/proxy/namespaces/default/pods/名字
 kubectl logs podname -f
 --配置文件修改应用
 kubectl apply -f *.yaml
-
+--暴露服务端口                    暴露类型        容器端口          service端口
+kubectl expose deploy 实例名 --type="NodePort" --target-port=8080 --port=80
