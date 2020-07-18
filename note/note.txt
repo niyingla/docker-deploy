@@ -31,4 +31,8 @@ kubectl creat -f *.yaml
 kubectl proxy
 --访问测试代理
 curl http://localhost:8001/api/vi/proxy/namespaces/default/pods/名字
+--查看pod日志 -f 跟踪
+kubectl logs podname -f
+--配置文件修改应用
+kubectl apply -f *.yaml
 
