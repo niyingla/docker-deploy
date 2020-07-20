@@ -37,3 +37,9 @@ kubectl logs podname -f
 kubectl apply -f *.yaml
 --暴露服务端口                    暴露类型        容器端口          service端口
 kubectl expose deploy 实例名 --type="NodePort" --target-port=8080 --port=80
+-- jk打包项目
+-- -U 强制刷新本地仓库
+-- pl 指定模块
+-- 同时处理选定模块所依赖的模块
+-- user-edge-service maven中模块得名字
+mvn -U -pl user-edge-service -am clean package
