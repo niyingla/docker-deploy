@@ -5,9 +5,10 @@ CMD 命令设置容器启动后默认执行的命令及其参数，
 ENTRYPOINT 配置容器启动时的执行命令
 （不会被忽略，一定会被执行，即使运行 docker run时指定了其他命令）
 
-
-
-
+--kubenete查看当前系统错误
+journalctl -f
+--获取节点信息
+kubectl get nodes
 --查看各个pod运行状态
 kubectl get pods -o wide
 --查看部署实例
