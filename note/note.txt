@@ -11,6 +11,8 @@ journalctl -f
 kubectl get nodes
 --查看各个pod运行状态
 kubectl get pods -o wide
+--获取相信信息
+kubectl describe deploy/pods/service 名字
 --查看部署实例
 kubectl get deploy
 --设置实例数
