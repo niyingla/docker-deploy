@@ -54,3 +54,5 @@ kubectl expose deploy 实例名 --type="NodePort" --target-port=8080 --port=80
 mvn -U -pl user-edge-service -am clean package
 -- 查看端口是否监听
 netstat -ntlp|grep 端口
+
+附件pod配置文件详解 https://www.cnblogs.com/mafeng/p/11769712.html
