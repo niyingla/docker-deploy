@@ -15,6 +15,8 @@ kubectl get pods -o wide
 kubectl get pods -l app=nginx
 --获取相信信息
 kubectl describe deploy/pods/service 名字
+--获取节点所有信息 json是格式
+kubectl get pods nginx -o json
 --查看部署实例
 kubectl get deploy
 --设置实例数
@@ -31,6 +33,7 @@ kubectl rollout status deploy 实例名
 --取消更新实例镜像
 kubectl rollout undo deploy 实例名
 --从配置文件创建 可以创建pod/deployment run命令会创建deployment
+-- creat 创建的节点 只要删除才能再次creat
 kubectl creat -f *.yaml
 --创建测试代理
 kubectl proxy
@@ -58,5 +61,7 @@ mvn -U -pl user-edge-service -am clean package
 netstat -ntlp|grep 端口
 -- -n 指定命名空间 kube-system 是系统内部命名空间
 kubectl -n kube-system ger svc
+
+--提供服务方式 除了geteway需要直接对外采用nodePort提供服务,其他只用通过dns 服务名访问就好
 
 附件pod配置文件详解 https://www.cnblogs.com/mafeng/p/11769712.html
