@@ -41,9 +41,10 @@ kubectl logs podname -f
 --配置文件修改应用
 kubectl apply -f *.yaml
 --通过kubeproxy暴露服务端口       暴露类型        容器端口
-service端口（可用于cluster_ip+端口访问服务）
+service端口（可用于cluster_ip+端口访问服务 cluster_ip要在容器内部访问）
 还会随机分配一个node_port也可以 服务器ip+端口 访问服务
 （可指定 kubuctl get service service端口映射后面）
+还可以通过 podip+容器端口访问
 kubectl expose deploy 实例名 --type="NodePort" --target-port=8080 --port=80
 -- jk打包项目
 -- -U 强制刷新本地仓库
